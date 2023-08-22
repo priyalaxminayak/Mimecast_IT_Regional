@@ -85,7 +85,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "ThreatIntelligenceIndicator\n| where Description==\"Mimecast Regional Threat Intel\"",
+        "query": "ThreatIntelligenceIndicator\n| where Description==\"Mimecast Regional Threat Intel\"\n| summarize arg_max(TimeGenerated,*) by ExternalIndicatorId",
         "size": 0,
         "timeContext": {
           "durationMs": 0
